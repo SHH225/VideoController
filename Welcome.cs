@@ -20,7 +20,7 @@ namespace ZDWindowsFormsTest
         {
             if (this.Opacity >0)
             {
-                this.Opacity -= 0.05;
+                this.Opacity -= 0.5;
                 //this.Opacity = 0.99;
             }
             else

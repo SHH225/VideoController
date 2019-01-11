@@ -9,6 +9,9 @@ using ZDNodeSystem.Model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
 
 namespace ZDWindowsFormsTest
 {
@@ -41,6 +44,12 @@ namespace ZDWindowsFormsTest
 		//	nodeGraph.NetworkPort = 6666; // default port is 6666
             nodeGraph.ConnectionClosed += NodeGraph_ConnectionClosed;
 			nodeGraph.ConnectionEstablished += NodeGraph_ConnectionEstablished;
+            MaterialList.Items.Add("1");
+            MaterialList.Items.Add("2");
+            MaterialList.Items.Add("3");
+            MaterialList.Items.Add("4");
+            MaterialList.Items.Add("5");
+
         }
         private ListBox lbSource = null;//拖拽数据来源
         private void NodeGraph_ConnectionEstablished(object sender, EventArgs e)
@@ -98,9 +107,13 @@ namespace ZDWindowsFormsTest
 			// timer tick updates the node graph's node's state.
 			if (nodeGraph.NetworkState == ZDNodeGraphNetworkState.Connected)
 			{
-				// Retrieve node graph nodes&classes&functions&properties and update the list boxes.
-				label1.Text = "CONNECTED";
-				foreach (var node in nodeGraph.Nodes)
+                // Retrieve node graph nodes&classes&functions&properties and update the list boxes.
+
+                //	label1.Text = "CONNECTED";
+                //#####Color LightChange######如果连接灯的颜色改变
+                StatusLight.BackColor = Color.FromArgb(24,242,39);
+
+                foreach (var node in nodeGraph.Nodes)
 				{
 					if (!MaterialList.Items.Contains(node.MemberHolderName))
 					{
@@ -480,18 +493,7 @@ namespace ZDWindowsFormsTest
         }
         private void Save_drama(object sender, EventArgs e)
         {
-            var filepath=ShowSaveFileDialog();
-            var finallistcount = FinalList.Items.Count;
-            FileStream fs = new FileStream(filepath, FileMode.Create);
-            StreamWriter sw = new StreamWriter(fs);
-          //  StreamWriter file = new StreamWriter(filepath, true);
-            for (int i = 0; i < finallistcount; i++)
-            {
-                sw.WriteLine(FinalList.Items[i].ToString());
-            }
-            sw.Flush();
-            sw.Close();
-            fs.Close();
+
         }
         //listbox项合并
         private void FinaList_MouseDown(object sender, MouseEventArgs e)
@@ -595,7 +597,111 @@ namespace ZDWindowsFormsTest
 
             }
         }
+        private Point mousePoint = new Point();
 
-       
+        private void panel_title_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            this.mousePoint.X = e.X;
+            this.mousePoint.Y = e.Y;
+        }
+
+        private void panel_title_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Top = Control.MousePosition.Y - mousePoint.Y;
+                this.Left = Control.MousePosition.X - mousePoint.X;
+            }
+        }
+        //Close the window
+        private void Shutdownform(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("是否退出？", "操作提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                //this.Dispose();
+                Application.Exit();
+            }
+        }
+        //minimize window
+        private void Minform(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+        /*
+        private int mMatrixRound = 8;
+        private Color mBack;
+
+        public Color Back
+        {
+            get { return mBack; }
+            set
+            {
+                if (value == null)
+                {
+                    mBack = Control.DefaultBackColor;
+                }
+                else
+                {
+                    mBack = value;
+                }
+                base.Refresh();
+            }
+        }
+
+        public int MatrixRound
+        {
+            get { return mMatrixRound; }
+            set
+            {
+                mMatrixRound = value;
+                base.Refresh();
+            }
+        }
+        private GraphicsPath CreateRound(Rectangle rect, int radius)
+        {
+            GraphicsPath roundRect = new GraphicsPath();
+            //顶端 
+            roundRect.AddLine(rect.Left + radius - 1, rect.Top - 1, rect.Right - radius, rect.Top - 1);
+            //右上角 
+            roundRect.AddArc(rect.Right - radius, rect.Top - 1, radius, radius, 270, 90);
+            //右边 
+            roundRect.AddLine(rect.Right, rect.Top + radius, rect.Right, rect.Bottom - radius);
+            //右下角
+
+            roundRect.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90);
+            //底边 
+            roundRect.AddLine(rect.Right - radius, rect.Bottom, rect.Left + radius, rect.Bottom);
+            //左下角 
+            roundRect.AddArc(rect.Left - 1, rect.Bottom - radius, radius, radius, 90, 90);
+            //左边 
+            roundRect.AddLine(rect.Left - 1, rect.Top + radius, rect.Left - 1, rect.Bottom - radius);
+            //左上角 
+            roundRect.AddArc(rect.Left - 1, rect.Top - 1, radius, radius, 180, 90);
+            return roundRect;
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            int width = base.Width - base.Margin.Left - base.Margin.Right;
+            int height = base.Height - base.Margin.Top - base.Margin.Bottom;
+            Rectangle rec = new Rectangle(base.Margin.Left, base.Margin.Top, width, height);
+            GraphicsPath round = CreateRound(rec, mMatrixRound);
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            e.Graphics.FillPath((Brush)(new SolidBrush(mBack)), round);
+        }
+        protected override void OnResize(EventArgs eventargs)
+        {
+            base.Refresh();
+        }
+        */
+   
+
+        private void splitContainer2_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
