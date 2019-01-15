@@ -35,11 +35,13 @@
             this.ClearBt = new System.Windows.Forms.Button();
             this.AnimateList = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.素材ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.重做ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.导入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.素材ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.系统状态ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.PropertiseList = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,8 +74,6 @@
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.StatusLight = new System.Windows.Forms.Label();
-            this.系统状态ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -118,7 +118,7 @@
             this.MaterialList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(108)))), ((int)(((byte)(106)))));
             this.MaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MaterialList.FormattingEnabled = true;
-            this.MaterialList.ItemHeight = 12;
+            this.MaterialList.ItemHeight = 17;
             this.MaterialList.Location = new System.Drawing.Point(0, 0);
             this.MaterialList.Name = "MaterialList";
             this.MaterialList.Size = new System.Drawing.Size(232, 699);
@@ -172,6 +172,21 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
+            // 素材ToolStripMenuItem
+            // 
+            this.素材ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("素材ToolStripMenuItem.BackgroundImage")));
+            this.素材ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.素材ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.素材ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.素材ToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.素材ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.素材ToolStripMenuItem.Name = "素材ToolStripMenuItem";
+            this.素材ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.素材ToolStripMenuItem.Size = new System.Drawing.Size(60, 31);
+            this.素材ToolStripMenuItem.Text = "连 接";
+            this.素材ToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.素材ToolStripMenuItem.Click += new System.EventHandler(this.ConnectButton_Click);
+            // 
             // 模板ToolStripMenuItem
             // 
             this.模板ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("模板ToolStripMenuItem.BackgroundImage")));
@@ -197,18 +212,6 @@
             this.重做ToolStripMenuItem.Size = new System.Drawing.Size(60, 31);
             this.重做ToolStripMenuItem.Text = "重 做";
             // 
-            // 设置ToolStripMenuItem
-            // 
-            this.设置ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("设置ToolStripMenuItem.BackgroundImage")));
-            this.设置ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.设置ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.设置ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.设置ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            this.设置ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(56, 31);
-            this.设置ToolStripMenuItem.Text = "设置";
-            // 
             // 导入ToolStripMenuItem
             // 
             this.导入ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("导入ToolStripMenuItem.BackgroundImage")));
@@ -221,19 +224,36 @@
             this.导入ToolStripMenuItem.Size = new System.Drawing.Size(60, 31);
             this.导入ToolStripMenuItem.Text = "导 入";
             // 
-            // 素材ToolStripMenuItem
+            // 系统状态ToolStripMenuItem
             // 
-            this.素材ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("素材ToolStripMenuItem.BackgroundImage")));
-            this.素材ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.素材ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.素材ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.素材ToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.素材ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.素材ToolStripMenuItem.Name = "素材ToolStripMenuItem";
-            this.素材ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.素材ToolStripMenuItem.Size = new System.Drawing.Size(60, 31);
-            this.素材ToolStripMenuItem.Text = "连 接";
-            this.素材ToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.系统状态ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("系统状态ToolStripMenuItem.BackgroundImage")));
+            this.系统状态ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.系统状态ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.系统状态ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.系统状态ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.系统状态ToolStripMenuItem.Name = "系统状态ToolStripMenuItem";
+            this.系统状态ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.系统状态ToolStripMenuItem.Size = new System.Drawing.Size(86, 31);
+            this.系统状态ToolStripMenuItem.Text = "编辑/播出";
+            this.系统状态ToolStripMenuItem.Click += new System.EventHandler(this.系统状态ToolStripMenuItem_Click);
+            // 
+            // 设置ToolStripMenuItem
+            // 
+            this.设置ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("设置ToolStripMenuItem.BackgroundImage")));
+            this.设置ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.设置ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.设置ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.设置ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
+            this.设置ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(56, 31);
+            this.设置ToolStripMenuItem.Text = "设置";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 35);
+            this.toolStripMenuItem1.Text = "  ";
             // 
             // label5
             // 
@@ -324,7 +344,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(414, 651);
+            this.tabPage2.Size = new System.Drawing.Size(414, 647);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -459,6 +479,7 @@
             this.ExpandBtn.TabIndex = 3;
             this.ExpandBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.ExpandBtn.UseVisualStyleBackColor = false;
+            this.ExpandBtn.Click += new System.EventHandler(this.MaxForm);
             // 
             // MinBtn
             // 
@@ -620,6 +641,7 @@
             // 
             this.splitContainer5.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer5.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer5.Panel1.BackgroundImage")));
+            this.splitContainer5.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer5.Panel1.Controls.Add(this.label3);
             // 
             // splitContainer5.Panel2
@@ -671,7 +693,6 @@
             // 
             // panel4
             // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -690,25 +711,6 @@
             this.StatusLight.Size = new System.Drawing.Size(20, 20);
             this.StatusLight.TabIndex = 0;
             this.StatusLight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // 系统状态ToolStripMenuItem
-            // 
-            this.系统状态ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("系统状态ToolStripMenuItem.BackgroundImage")));
-            this.系统状态ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.系统状态ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.系统状态ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.系统状态ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.系统状态ToolStripMenuItem.Name = "系统状态ToolStripMenuItem";
-            this.系统状态ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.系统状态ToolStripMenuItem.Size = new System.Drawing.Size(86, 31);
-            this.系统状态ToolStripMenuItem.Text = "编辑/播出";
-            this.系统状态ToolStripMenuItem.Click += new System.EventHandler(this.系统状态ToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 35);
-            this.toolStripMenuItem1.Text = "  ";
             // 
             // Form1
             // 
@@ -731,6 +733,7 @@
             this.ShowIcon = false;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.Form1_Size_Change);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
