@@ -35,7 +35,7 @@
             this.ClearBt = new System.Windows.Forms.Button();
             this.AnimateList = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.素材ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConnectBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.重做ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.导入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,7 +130,8 @@
             this.ClearBt.BackColor = System.Drawing.Color.Transparent;
             this.ClearBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ClearBt.BackgroundImage")));
             this.ClearBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClearBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ClearBt.FlatAppearance.BorderSize = 0;
+            this.ClearBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ClearBt.Location = new System.Drawing.Point(211, 3);
             this.ClearBt.Margin = new System.Windows.Forms.Padding(0);
@@ -158,7 +159,7 @@
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.素材ToolStripMenuItem,
+            this.ConnectBtn,
             this.模板ToolStripMenuItem,
             this.重做ToolStripMenuItem,
             this.导入ToolStripMenuItem,
@@ -167,25 +168,28 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(-1, 2);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(462, 39);
+            this.menuStrip1.Size = new System.Drawing.Size(582, 39);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
-            // 素材ToolStripMenuItem
+            // ConnectBtn
             // 
-            this.素材ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("素材ToolStripMenuItem.BackgroundImage")));
-            this.素材ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.素材ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.素材ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.素材ToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.素材ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.素材ToolStripMenuItem.Name = "素材ToolStripMenuItem";
-            this.素材ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.素材ToolStripMenuItem.Size = new System.Drawing.Size(60, 31);
-            this.素材ToolStripMenuItem.Text = "连 接";
-            this.素材ToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.素材ToolStripMenuItem.Click += new System.EventHandler(this.ConnectButton_Click);
+            this.ConnectBtn.BackgroundImage = global::ZDWindowsFormsTest.Properties.Resources.titlebg;
+            this.ConnectBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ConnectBtn.Checked = true;
+            this.ConnectBtn.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ConnectBtn.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ConnectBtn.ForeColor = System.Drawing.Color.White;
+            this.ConnectBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ConnectBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ConnectBtn.Name = "ConnectBtn";
+            this.ConnectBtn.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.ConnectBtn.Size = new System.Drawing.Size(60, 31);
+            this.ConnectBtn.Text = "连 接";
+            this.ConnectBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.ConnectBtn.Click += new System.EventHandler(this.ConnectButton_Click);
+            this.ConnectBtn.MouseEnter += new System.EventHandler(this.ConnectBtn_MouseEnter);
             // 
             // 模板ToolStripMenuItem
             // 
@@ -355,7 +359,7 @@
             this.tabPage1.Controls.Add(this.FinalList);
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(414, 647);
+            this.tabPage1.Size = new System.Drawing.Size(414, 650);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -367,7 +371,7 @@
             this.FinalList.ItemHeight = 17;
             this.FinalList.Location = new System.Drawing.Point(-4, -4);
             this.FinalList.Name = "FinalList";
-            this.FinalList.Size = new System.Drawing.Size(418, 650);
+            this.FinalList.Size = new System.Drawing.Size(422, 667);
             this.FinalList.TabIndex = 20;
             this.FinalList.Click += new System.EventHandler(this.FinalList_SelectedIndexChanged);
             this.FinalList.DragDrop += new System.Windows.Forms.DragEventHandler(this.FinalList_DragDrop);
@@ -384,7 +388,7 @@
             this.tabControl1.Location = new System.Drawing.Point(4, 32);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(422, 677);
+            this.tabControl1.Size = new System.Drawing.Size(422, 680);
             this.tabControl1.TabIndex = 26;
             // 
             // DeleteBt
@@ -392,7 +396,8 @@
             this.DeleteBt.BackColor = System.Drawing.Color.Transparent;
             this.DeleteBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBt.BackgroundImage")));
             this.DeleteBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DeleteBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DeleteBt.FlatAppearance.BorderSize = 0;
+            this.DeleteBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.DeleteBt.Location = new System.Drawing.Point(142, 3);
             this.DeleteBt.Margin = new System.Windows.Forms.Padding(0);
@@ -409,7 +414,8 @@
             this.MoveUpBt.BackColor = System.Drawing.Color.Transparent;
             this.MoveUpBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MoveUpBt.BackgroundImage")));
             this.MoveUpBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MoveUpBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MoveUpBt.FlatAppearance.BorderSize = 0;
+            this.MoveUpBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MoveUpBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MoveUpBt.Location = new System.Drawing.Point(4, 3);
             this.MoveUpBt.Margin = new System.Windows.Forms.Padding(0);
@@ -426,7 +432,8 @@
             this.MoveDownBt.BackColor = System.Drawing.Color.Transparent;
             this.MoveDownBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MoveDownBt.BackgroundImage")));
             this.MoveDownBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MoveDownBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MoveDownBt.FlatAppearance.BorderSize = 0;
+            this.MoveDownBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MoveDownBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MoveDownBt.Location = new System.Drawing.Point(73, 3);
             this.MoveDownBt.Margin = new System.Windows.Forms.Padding(0);
@@ -470,7 +477,8 @@
             this.ExpandBtn.BackColor = System.Drawing.Color.Transparent;
             this.ExpandBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExpandBtn.BackgroundImage")));
             this.ExpandBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ExpandBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ExpandBtn.FlatAppearance.BorderSize = 0;
+            this.ExpandBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExpandBtn.ForeColor = System.Drawing.Color.Transparent;
             this.ExpandBtn.Location = new System.Drawing.Point(1403, 2);
             this.ExpandBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -488,7 +496,7 @@
             this.MinBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MinBtn.BackgroundImage")));
             this.MinBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MinBtn.FlatAppearance.BorderSize = 0;
-            this.MinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MinBtn.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MinBtn.Location = new System.Drawing.Point(1374, 2);
             this.MinBtn.Name = "MinBtn";
@@ -501,13 +509,13 @@
             // ShutDownBtn
             // 
             this.ShutDownBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ShutDownBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.ShutDownBtn.BackColor = System.Drawing.Color.Transparent;
             this.ShutDownBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShutDownBtn.BackgroundImage")));
             this.ShutDownBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ShutDownBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.ShutDownBtn.FlatAppearance.BorderSize = 0;
             this.ShutDownBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ShutDownBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ShutDownBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShutDownBtn.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ShutDownBtn.Location = new System.Drawing.Point(1431, 2);
             this.ShutDownBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -552,6 +560,7 @@
             // 
             // splitContainer1
             // 
+            this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(667, 43);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -572,6 +581,7 @@
             // 
             // splitContainer2
             // 
+            this.splitContainer2.IsSplitterFixed = true;
             this.splitContainer2.Location = new System.Drawing.Point(670, 409);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -593,6 +603,7 @@
             // 
             // splitContainer3
             // 
+            this.splitContainer3.IsSplitterFixed = true;
             this.splitContainer3.Location = new System.Drawing.Point(861, 408);
             this.splitContainer3.Name = "splitContainer3";
             this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -613,6 +624,7 @@
             // 
             // splitContainer4
             // 
+            this.splitContainer4.IsSplitterFixed = true;
             this.splitContainer4.Location = new System.Drawing.Point(1061, 408);
             this.splitContainer4.Name = "splitContainer4";
             this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -633,6 +645,7 @@
             // 
             // splitContainer5
             // 
+            this.splitContainer5.IsSplitterFixed = true;
             this.splitContainer5.Location = new System.Drawing.Point(1256, 408);
             this.splitContainer5.Name = "splitContainer5";
             this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -673,6 +686,7 @@
             // 
             // splitContainer6
             // 
+            this.splitContainer6.IsSplitterFixed = true;
             this.splitContainer6.Location = new System.Drawing.Point(7, 43);
             this.splitContainer6.Name = "splitContainer6";
             this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -786,7 +800,7 @@
         private System.Windows.Forms.ToolStripMenuItem 重做ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 导入ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 素材ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ConnectBtn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox PropertiseList;
         private System.Windows.Forms.Label label3;

@@ -651,10 +651,12 @@ namespace ZDWindowsFormsTest
                 FormStatusMark = false;
             }
         }
-      
-        
-   
 
-  
+        private void ConnectBtn_MouseEnter(object sender, EventArgs e)
+        {
+           // ConnectBtn.BackColor= Color.FromArgb(64,64,64);
+           // ConnectBtn.BackgroundImage = ZDWindowsFormsTest.Properties.Resources.titlebg2;
+         //     ConnectBtn.Text = "12";
+        }
     }
 }

@@ -146,30 +146,6 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>217, 17</value>
   </metadata>
-  <data name="素材ToolStripMenuItem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEkAAAAdCAYAAADmbEE9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsSAAALEgHS3X78AAAEBElE
-        QVRoQ+2Z6UojURCFG0ERBEEUQaIguMR93/d9TeK+rw/jc/lQ6v+anGtOqFTKzAwM6WY08P1Juu8957OU
-        vjHiq6urK9vT0/OaTqff+/v7ZXBwUIaHh2V0dFTGxsZkfHxcJicnZWpqSqanp2VmZkZmZ2dlbm4uMD8/
-        H1hYWAgsLi5WHe7NLMyGnMiL3MiPHuiDXuiHnuiL3ugPD3kfmYKaz1dnZ+cLLlhfX5dcLienp6dydnYm
-        FxcXcnl5KVdXV3J9fS03Nzdye3srd3d3cn9/Lw8PD0UeHx8DT09Pgefn56rDvZlF50Ne5EZ+9EAf9EI/
-        9ERf9EZ/eIAPeAmCOjo6Mnlzsr+/L9lsVo6OjuTk5KREFNCiKskiDFpNvBxWjhbEbhSE3ugPD/ABL3k/
-        2SiVSr1iRA8ODiSTyZSIAljg/Pw8LGanygojCBYXOocWA+z0oBf6sSsFwQN8wAv8RG1tbW9bW1uyt7cX
-        Pjg8PAwXYey0LDtZVpoVFzfMpKUQPTmUg77ojf7wAB/b29sCP1Fra6tA0s7OTvjAyuJkHR8flwnDT4JT
-        pkGouLBZmNGKQR89OVoOgA94gZ+oublZNjY2whtWFn4vKYvCOGHYRIujPIJQ1Ubvr3MxKyeGYigHPa0c
-        AC8tLS0SNTU1ydraWviLrmVh1KwwPWFaHOURhIkLnYPZdF5OjBWDvloOfMAL/ESNjY2yvLwsKysr4c1K
-        wsDu7m5xccqjQEqMG2ZhNp0X+dnlKzEAPuAFfqKGhobwILa0tBTAB6urqyXCKG1zc7O4KOVpgZQYNzoP
-        M+rc6EEpWgx6oz9dwAv8RPX19cUnZj4pa2GcMi2OaIEahIgLm8WKIOjDabFi+NQOL/AT1dbWFo8YxB4z
-        cKOWR7gBRWoQotrYDDqfzc5OFEIp2gO8wE9UU1MTzjL6XMazmZUHsBDh4pSZNHQ+ndt2Yld25/kOwA9O
-        JuGwRyYmJgK8SIObNVzUwk3jwMsDbHavH7trH/ATJOE07KEv/t/x+oPfSvpBScJ3Kj/4lEkaGRn5oUCZ
-        JO8ifFv33fA8FCV5N4ChoaG/Al+BJgUvXyW8/qBMknezF8AyMDCQWLy8Fq93mST9obeIt7kF3wknDS+n
-        xeurfZRI0hd5i3khSF9fX2Lx8hKvp/ZQIukrOXZRL0Q6nU48Xm7bzXanE0p6w036An2zXtgLAHp7exOL
-        lxfoXrqv9ZD38w5Jr+3t7X8sxwsC8O+XpOHlBLqP7qn7wwe8wA8kZevq6sINVpBezG7khapEd3f3P8fb
-        pxK2g+5nReE9eIEfSMLrBW+kUqniDXoBvbC3OfBKxI2XE+g+uid7w0NB0Od/cNUrlwej9ZEHF3xX0B8e
-        ChMURb8ArWFhXfIajwkAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="模板ToolStripMenuItem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEkAAAAdCAYAAADmbEE9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
