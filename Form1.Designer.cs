@@ -32,16 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MaterialList = new System.Windows.Forms.ListBox();
-            this.ClearBt = new System.Windows.Forms.Button();
             this.AnimateList = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ConnectBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.重做ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.导入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.系统状态ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.PropertiseList = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,14 +46,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.FinalList = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.DeleteBt = new System.Windows.Forms.Button();
-            this.MoveUpBt = new System.Windows.Forms.Button();
-            this.MoveDownBt = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.paneltop = new System.Windows.Forms.Panel();
-            this.ExpandBtn = new System.Windows.Forms.Button();
-            this.MinBtn = new System.Windows.Forms.Button();
-            this.ShutDownBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -73,7 +59,21 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.StatusLight = new System.Windows.Forms.Label();
+            this.StatusLight = new System.Windows.Forms.PictureBox();
+            this.MoveUpBt = new System.Windows.Forms.Button();
+            this.ClearBt = new System.Windows.Forms.Button();
+            this.DeleteBt = new System.Windows.Forms.Button();
+            this.MoveDownBt = new System.Windows.Forms.Button();
+            this.ConnectBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.重做ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.导入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.系统状态ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExpandBtn = new System.Windows.Forms.Button();
+            this.MinBtn = new System.Windows.Forms.Button();
+            this.ShutDownBtn = new System.Windows.Forms.Button();
+            this.保存剧本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -105,6 +105,7 @@
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StatusLight)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -124,23 +125,6 @@
             this.MaterialList.Size = new System.Drawing.Size(232, 699);
             this.MaterialList.TabIndex = 2;
             this.MaterialList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // ClearBt
-            // 
-            this.ClearBt.BackColor = System.Drawing.Color.Transparent;
-            this.ClearBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ClearBt.BackgroundImage")));
-            this.ClearBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClearBt.FlatAppearance.BorderSize = 0;
-            this.ClearBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ClearBt.Location = new System.Drawing.Point(211, 3);
-            this.ClearBt.Margin = new System.Windows.Forms.Padding(0);
-            this.ClearBt.Name = "ClearBt";
-            this.ClearBt.Size = new System.Drawing.Size(64, 26);
-            this.ClearBt.TabIndex = 12;
-            this.ClearBt.Text = "清 空";
-            this.ClearBt.UseVisualStyleBackColor = false;
-            this.ClearBt.Click += new System.EventHandler(this.button3_Click);
             // 
             // AnimateList
             // 
@@ -165,99 +149,13 @@
             this.导入ToolStripMenuItem,
             this.系统状态ToolStripMenuItem,
             this.设置ToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.保存剧本ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(-1, 2);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(582, 39);
+            this.menuStrip1.Size = new System.Drawing.Size(502, 39);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // ConnectBtn
-            // 
-            this.ConnectBtn.BackgroundImage = global::ZDWindowsFormsTest.Properties.Resources.titlebg;
-            this.ConnectBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ConnectBtn.Checked = true;
-            this.ConnectBtn.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ConnectBtn.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ConnectBtn.ForeColor = System.Drawing.Color.White;
-            this.ConnectBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ConnectBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.ConnectBtn.Name = "ConnectBtn";
-            this.ConnectBtn.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.ConnectBtn.Size = new System.Drawing.Size(60, 31);
-            this.ConnectBtn.Text = "连 接";
-            this.ConnectBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.ConnectBtn.Click += new System.EventHandler(this.ConnectButton_Click);
-            this.ConnectBtn.MouseEnter += new System.EventHandler(this.ConnectBtn_MouseEnter);
-            // 
-            // 模板ToolStripMenuItem
-            // 
-            this.模板ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("模板ToolStripMenuItem.BackgroundImage")));
-            this.模板ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.模板ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.模板ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.模板ToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.模板ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.模板ToolStripMenuItem.Name = "模板ToolStripMenuItem";
-            this.模板ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.模板ToolStripMenuItem.Size = new System.Drawing.Size(80, 31);
-            this.模板ToolStripMenuItem.Text = "打开模板";
-            // 
-            // 重做ToolStripMenuItem
-            // 
-            this.重做ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("重做ToolStripMenuItem.BackgroundImage")));
-            this.重做ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.重做ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.重做ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.重做ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.重做ToolStripMenuItem.Name = "重做ToolStripMenuItem";
-            this.重做ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.重做ToolStripMenuItem.Size = new System.Drawing.Size(60, 31);
-            this.重做ToolStripMenuItem.Text = "重 做";
-            // 
-            // 导入ToolStripMenuItem
-            // 
-            this.导入ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("导入ToolStripMenuItem.BackgroundImage")));
-            this.导入ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.导入ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.导入ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.导入ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.导入ToolStripMenuItem.Name = "导入ToolStripMenuItem";
-            this.导入ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(60, 31);
-            this.导入ToolStripMenuItem.Text = "导 入";
-            // 
-            // 系统状态ToolStripMenuItem
-            // 
-            this.系统状态ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("系统状态ToolStripMenuItem.BackgroundImage")));
-            this.系统状态ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.系统状态ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.系统状态ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.系统状态ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.系统状态ToolStripMenuItem.Name = "系统状态ToolStripMenuItem";
-            this.系统状态ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.系统状态ToolStripMenuItem.Size = new System.Drawing.Size(86, 31);
-            this.系统状态ToolStripMenuItem.Text = "编辑/播出";
-            this.系统状态ToolStripMenuItem.Click += new System.EventHandler(this.系统状态ToolStripMenuItem_Click);
-            // 
-            // 设置ToolStripMenuItem
-            // 
-            this.设置ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("设置ToolStripMenuItem.BackgroundImage")));
-            this.设置ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.设置ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.设置ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.设置ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            this.设置ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(56, 31);
-            this.设置ToolStripMenuItem.Text = "设置";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 35);
-            this.toolStripMenuItem1.Text = "  ";
             // 
             // label5
             // 
@@ -348,7 +246,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(414, 647);
+            this.tabPage2.Size = new System.Drawing.Size(414, 650);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -366,10 +264,11 @@
             // FinalList
             // 
             this.FinalList.AllowDrop = true;
+            this.FinalList.Font = new System.Drawing.Font("微软雅黑", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FinalList.FormattingEnabled = true;
             this.FinalList.HorizontalScrollbar = true;
             this.FinalList.ItemHeight = 17;
-            this.FinalList.Location = new System.Drawing.Point(-4, -4);
+            this.FinalList.Location = new System.Drawing.Point(0, 0);
             this.FinalList.Name = "FinalList";
             this.FinalList.Size = new System.Drawing.Size(422, 667);
             this.FinalList.TabIndex = 20;
@@ -390,59 +289,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(422, 680);
             this.tabControl1.TabIndex = 26;
-            // 
-            // DeleteBt
-            // 
-            this.DeleteBt.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBt.BackgroundImage")));
-            this.DeleteBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DeleteBt.FlatAppearance.BorderSize = 0;
-            this.DeleteBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.DeleteBt.Location = new System.Drawing.Point(142, 3);
-            this.DeleteBt.Margin = new System.Windows.Forms.Padding(0);
-            this.DeleteBt.Name = "DeleteBt";
-            this.DeleteBt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DeleteBt.Size = new System.Drawing.Size(64, 26);
-            this.DeleteBt.TabIndex = 37;
-            this.DeleteBt.Text = "删 除";
-            this.DeleteBt.UseVisualStyleBackColor = false;
-            this.DeleteBt.Click += new System.EventHandler(this.DeleteBt_Click);
-            // 
-            // MoveUpBt
-            // 
-            this.MoveUpBt.BackColor = System.Drawing.Color.Transparent;
-            this.MoveUpBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MoveUpBt.BackgroundImage")));
-            this.MoveUpBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MoveUpBt.FlatAppearance.BorderSize = 0;
-            this.MoveUpBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MoveUpBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MoveUpBt.Location = new System.Drawing.Point(4, 3);
-            this.MoveUpBt.Margin = new System.Windows.Forms.Padding(0);
-            this.MoveUpBt.Name = "MoveUpBt";
-            this.MoveUpBt.Size = new System.Drawing.Size(64, 26);
-            this.MoveUpBt.TabIndex = 38;
-            this.MoveUpBt.Text = "上 移";
-            this.MoveUpBt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.MoveUpBt.UseVisualStyleBackColor = false;
-            this.MoveUpBt.Click += new System.EventHandler(this.MoveUpBt_Click);
-            // 
-            // MoveDownBt
-            // 
-            this.MoveDownBt.BackColor = System.Drawing.Color.Transparent;
-            this.MoveDownBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MoveDownBt.BackgroundImage")));
-            this.MoveDownBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MoveDownBt.FlatAppearance.BorderSize = 0;
-            this.MoveDownBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MoveDownBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MoveDownBt.Location = new System.Drawing.Point(73, 3);
-            this.MoveDownBt.Margin = new System.Windows.Forms.Padding(0);
-            this.MoveDownBt.Name = "MoveDownBt";
-            this.MoveDownBt.Size = new System.Drawing.Size(64, 26);
-            this.MoveDownBt.TabIndex = 39;
-            this.MoveDownBt.Text = "下 移";
-            this.MoveDownBt.UseVisualStyleBackColor = false;
-            this.MoveDownBt.Click += new System.EventHandler(this.MoveDownBt_Click);
             // 
             // label4
             // 
@@ -470,61 +316,6 @@
             this.paneltop.TabIndex = 42;
             this.paneltop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseDown);
             this.paneltop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseMove);
-            // 
-            // ExpandBtn
-            // 
-            this.ExpandBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ExpandBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ExpandBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExpandBtn.BackgroundImage")));
-            this.ExpandBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ExpandBtn.FlatAppearance.BorderSize = 0;
-            this.ExpandBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExpandBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.ExpandBtn.Location = new System.Drawing.Point(1403, 2);
-            this.ExpandBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.ExpandBtn.Name = "ExpandBtn";
-            this.ExpandBtn.Size = new System.Drawing.Size(27, 27);
-            this.ExpandBtn.TabIndex = 3;
-            this.ExpandBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.ExpandBtn.UseVisualStyleBackColor = false;
-            this.ExpandBtn.Click += new System.EventHandler(this.MaxForm);
-            // 
-            // MinBtn
-            // 
-            this.MinBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MinBtn.BackColor = System.Drawing.Color.Transparent;
-            this.MinBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MinBtn.BackgroundImage")));
-            this.MinBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MinBtn.FlatAppearance.BorderSize = 0;
-            this.MinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinBtn.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MinBtn.Location = new System.Drawing.Point(1374, 2);
-            this.MinBtn.Name = "MinBtn";
-            this.MinBtn.Size = new System.Drawing.Size(27, 27);
-            this.MinBtn.TabIndex = 2;
-            this.MinBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.MinBtn.UseVisualStyleBackColor = false;
-            this.MinBtn.Click += new System.EventHandler(this.Minform);
-            // 
-            // ShutDownBtn
-            // 
-            this.ShutDownBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ShutDownBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ShutDownBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShutDownBtn.BackgroundImage")));
-            this.ShutDownBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ShutDownBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.ShutDownBtn.FlatAppearance.BorderSize = 0;
-            this.ShutDownBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ShutDownBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ShutDownBtn.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ShutDownBtn.Location = new System.Drawing.Point(1431, 2);
-            this.ShutDownBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.ShutDownBtn.Name = "ShutDownBtn";
-            this.ShutDownBtn.Size = new System.Drawing.Size(27, 27);
-            this.ShutDownBtn.TabIndex = 1;
-            this.ShutDownBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.ShutDownBtn.UseVisualStyleBackColor = false;
-            this.ShutDownBtn.Click += new System.EventHandler(this.Shutdownform);
             // 
             // label1
             // 
@@ -718,13 +509,224 @@
             // 
             // StatusLight
             // 
-            this.StatusLight.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.StatusLight.BackColor = System.Drawing.Color.Lime;
-            this.StatusLight.Location = new System.Drawing.Point(9, 4);
+            this.StatusLight.BackgroundImage = global::ZDWindowsFormsTest.Properties.Resources.redlight;
+            this.StatusLight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.StatusLight.Location = new System.Drawing.Point(7, 3);
             this.StatusLight.Name = "StatusLight";
-            this.StatusLight.Size = new System.Drawing.Size(20, 20);
-            this.StatusLight.TabIndex = 0;
-            this.StatusLight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.StatusLight.Size = new System.Drawing.Size(21, 22);
+            this.StatusLight.TabIndex = 1;
+            this.StatusLight.TabStop = false;
+            // 
+            // MoveUpBt
+            // 
+            this.MoveUpBt.BackColor = System.Drawing.Color.Transparent;
+            this.MoveUpBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MoveUpBt.BackgroundImage")));
+            this.MoveUpBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MoveUpBt.FlatAppearance.BorderSize = 0;
+            this.MoveUpBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MoveUpBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.MoveUpBt.Location = new System.Drawing.Point(4, 3);
+            this.MoveUpBt.Margin = new System.Windows.Forms.Padding(0);
+            this.MoveUpBt.Name = "MoveUpBt";
+            this.MoveUpBt.Size = new System.Drawing.Size(64, 26);
+            this.MoveUpBt.TabIndex = 38;
+            this.MoveUpBt.Text = "上 移";
+            this.MoveUpBt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.MoveUpBt.UseVisualStyleBackColor = false;
+            this.MoveUpBt.Click += new System.EventHandler(this.MoveUpBt_Click);
+            // 
+            // ClearBt
+            // 
+            this.ClearBt.BackColor = System.Drawing.Color.Transparent;
+            this.ClearBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ClearBt.BackgroundImage")));
+            this.ClearBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClearBt.FlatAppearance.BorderSize = 0;
+            this.ClearBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ClearBt.Location = new System.Drawing.Point(211, 3);
+            this.ClearBt.Margin = new System.Windows.Forms.Padding(0);
+            this.ClearBt.Name = "ClearBt";
+            this.ClearBt.Size = new System.Drawing.Size(64, 26);
+            this.ClearBt.TabIndex = 12;
+            this.ClearBt.Text = "清 空";
+            this.ClearBt.UseVisualStyleBackColor = false;
+            this.ClearBt.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // DeleteBt
+            // 
+            this.DeleteBt.BackColor = System.Drawing.Color.Transparent;
+            this.DeleteBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBt.BackgroundImage")));
+            this.DeleteBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeleteBt.FlatAppearance.BorderSize = 0;
+            this.DeleteBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.DeleteBt.Location = new System.Drawing.Point(142, 3);
+            this.DeleteBt.Margin = new System.Windows.Forms.Padding(0);
+            this.DeleteBt.Name = "DeleteBt";
+            this.DeleteBt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DeleteBt.Size = new System.Drawing.Size(64, 26);
+            this.DeleteBt.TabIndex = 37;
+            this.DeleteBt.Text = "删 除";
+            this.DeleteBt.UseVisualStyleBackColor = false;
+            this.DeleteBt.Click += new System.EventHandler(this.DeleteBt_Click);
+            // 
+            // MoveDownBt
+            // 
+            this.MoveDownBt.BackColor = System.Drawing.Color.Transparent;
+            this.MoveDownBt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MoveDownBt.BackgroundImage")));
+            this.MoveDownBt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MoveDownBt.FlatAppearance.BorderSize = 0;
+            this.MoveDownBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MoveDownBt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.MoveDownBt.Location = new System.Drawing.Point(73, 3);
+            this.MoveDownBt.Margin = new System.Windows.Forms.Padding(0);
+            this.MoveDownBt.Name = "MoveDownBt";
+            this.MoveDownBt.Size = new System.Drawing.Size(64, 26);
+            this.MoveDownBt.TabIndex = 39;
+            this.MoveDownBt.Text = "下 移";
+            this.MoveDownBt.UseVisualStyleBackColor = false;
+            this.MoveDownBt.Click += new System.EventHandler(this.MoveDownBt_Click);
+            // 
+            // ConnectBtn
+            // 
+            this.ConnectBtn.BackgroundImage = global::ZDWindowsFormsTest.Properties.Resources.titlebg;
+            this.ConnectBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ConnectBtn.Checked = true;
+            this.ConnectBtn.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ConnectBtn.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ConnectBtn.ForeColor = System.Drawing.Color.White;
+            this.ConnectBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ConnectBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ConnectBtn.Name = "ConnectBtn";
+            this.ConnectBtn.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.ConnectBtn.Size = new System.Drawing.Size(60, 31);
+            this.ConnectBtn.Text = "连 接";
+            this.ConnectBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.ConnectBtn.Click += new System.EventHandler(this.ConnectButton_Click);
+            this.ConnectBtn.MouseEnter += new System.EventHandler(this.ConnectBtn_MouseEnter);
+            // 
+            // 模板ToolStripMenuItem
+            // 
+            this.模板ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("模板ToolStripMenuItem.BackgroundImage")));
+            this.模板ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.模板ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.模板ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.模板ToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.模板ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.模板ToolStripMenuItem.Name = "模板ToolStripMenuItem";
+            this.模板ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.模板ToolStripMenuItem.Size = new System.Drawing.Size(80, 31);
+            this.模板ToolStripMenuItem.Text = "打开模板";
+            // 
+            // 重做ToolStripMenuItem
+            // 
+            this.重做ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("重做ToolStripMenuItem.BackgroundImage")));
+            this.重做ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.重做ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.重做ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.重做ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.重做ToolStripMenuItem.Name = "重做ToolStripMenuItem";
+            this.重做ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.重做ToolStripMenuItem.Size = new System.Drawing.Size(60, 31);
+            this.重做ToolStripMenuItem.Text = "重 做";
+            // 
+            // 导入ToolStripMenuItem
+            // 
+            this.导入ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("导入ToolStripMenuItem.BackgroundImage")));
+            this.导入ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.导入ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.导入ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.导入ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.导入ToolStripMenuItem.Name = "导入ToolStripMenuItem";
+            this.导入ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(60, 31);
+            this.导入ToolStripMenuItem.Text = "导 入";
+            // 
+            // 系统状态ToolStripMenuItem
+            // 
+            this.系统状态ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("系统状态ToolStripMenuItem.BackgroundImage")));
+            this.系统状态ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.系统状态ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.系统状态ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.系统状态ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.系统状态ToolStripMenuItem.Name = "系统状态ToolStripMenuItem";
+            this.系统状态ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.系统状态ToolStripMenuItem.Size = new System.Drawing.Size(86, 31);
+            this.系统状态ToolStripMenuItem.Text = "编辑/播出";
+            this.系统状态ToolStripMenuItem.Click += new System.EventHandler(this.系统状态ToolStripMenuItem_Click);
+            // 
+            // 设置ToolStripMenuItem
+            // 
+            this.设置ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("设置ToolStripMenuItem.BackgroundImage")));
+            this.设置ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.设置ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.设置ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.设置ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
+            this.设置ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(56, 31);
+            this.设置ToolStripMenuItem.Text = "设置";
+            // 
+            // ExpandBtn
+            // 
+            this.ExpandBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ExpandBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ExpandBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExpandBtn.BackgroundImage")));
+            this.ExpandBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExpandBtn.FlatAppearance.BorderSize = 0;
+            this.ExpandBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExpandBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.ExpandBtn.Location = new System.Drawing.Point(1403, 2);
+            this.ExpandBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.ExpandBtn.Name = "ExpandBtn";
+            this.ExpandBtn.Size = new System.Drawing.Size(27, 27);
+            this.ExpandBtn.TabIndex = 3;
+            this.ExpandBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.ExpandBtn.UseVisualStyleBackColor = false;
+            this.ExpandBtn.Click += new System.EventHandler(this.MaxForm);
+            // 
+            // MinBtn
+            // 
+            this.MinBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MinBtn.BackColor = System.Drawing.Color.Transparent;
+            this.MinBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MinBtn.BackgroundImage")));
+            this.MinBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MinBtn.FlatAppearance.BorderSize = 0;
+            this.MinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinBtn.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.MinBtn.Location = new System.Drawing.Point(1374, 2);
+            this.MinBtn.Name = "MinBtn";
+            this.MinBtn.Size = new System.Drawing.Size(27, 27);
+            this.MinBtn.TabIndex = 2;
+            this.MinBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.MinBtn.UseVisualStyleBackColor = false;
+            this.MinBtn.Click += new System.EventHandler(this.Minform);
+            // 
+            // ShutDownBtn
+            // 
+            this.ShutDownBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ShutDownBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ShutDownBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShutDownBtn.BackgroundImage")));
+            this.ShutDownBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ShutDownBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.ShutDownBtn.FlatAppearance.BorderSize = 0;
+            this.ShutDownBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ShutDownBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShutDownBtn.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ShutDownBtn.Location = new System.Drawing.Point(1431, 2);
+            this.ShutDownBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.ShutDownBtn.Name = "ShutDownBtn";
+            this.ShutDownBtn.Size = new System.Drawing.Size(27, 27);
+            this.ShutDownBtn.TabIndex = 1;
+            this.ShutDownBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.ShutDownBtn.UseVisualStyleBackColor = false;
+            this.ShutDownBtn.Click += new System.EventHandler(this.Shutdownform);
+            // 
+            // 保存剧本ToolStripMenuItem
+            // 
+            this.保存剧本ToolStripMenuItem.Name = "保存剧本ToolStripMenuItem";
+            this.保存剧本ToolStripMenuItem.Size = new System.Drawing.Size(68, 35);
+            this.保存剧本ToolStripMenuItem.Text = "保存剧本";
             // 
             // Form1
             // 
@@ -787,6 +789,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StatusLight)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -832,10 +835,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.SplitContainer splitContainer6;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label StatusLight;
         private System.Windows.Forms.Button ExpandBtn;
         private System.Windows.Forms.ToolStripMenuItem 系统状态ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.PictureBox StatusLight;
+        private System.Windows.Forms.ToolStripMenuItem 保存剧本ToolStripMenuItem;
     }
 }
 

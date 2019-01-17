@@ -356,7 +356,6 @@
             this.BooleanStatus.Name = "BooleanStatus";
             this.BooleanStatus.Size = new System.Drawing.Size(75, 23);
             this.BooleanStatus.TabIndex = 34;
-            this.BooleanStatus.Text = "true";
             this.BooleanStatus.UseVisualStyleBackColor = true;
             this.BooleanStatus.Click += new System.EventHandler(this.BooleanChange);
             // 
@@ -372,7 +371,7 @@
             // 
             // Color_button
             // 
-            this.Color_button.Location = new System.Drawing.Point(290, 204);
+            this.Color_button.Location = new System.Drawing.Point(290, 206);
             this.Color_button.Name = "Color_button";
             this.Color_button.Size = new System.Drawing.Size(75, 27);
             this.Color_button.TabIndex = 36;

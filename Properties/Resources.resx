@@ -118,13 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="titlebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\titlebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WelcomePage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WelcomePage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="titlebg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\titlebg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WelcomePage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WelcomePage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="titlebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\titlebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greenlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greenlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

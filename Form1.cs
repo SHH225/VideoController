@@ -52,7 +52,7 @@ namespace ZDWindowsFormsTest
             MaterialList.Items.Add("3");
             MaterialList.Items.Add("4");
             MaterialList.Items.Add("5");
-
+        
         }
         private ListBox lbSource = null;//拖拽数据来源
         private void NodeGraph_ConnectionEstablished(object sender, EventArgs e)
@@ -68,10 +68,19 @@ namespace ZDWindowsFormsTest
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
-			// this is our connection address.
-			nodeGraph.NetworkIPAddress = "127.0.0.1";
-			nodeGraph.NetworkPort = 6666;
-            nodeGraph.Connect();
+            // this is our connection address.
+            if (nodeGraph.NetworkState != ZDNodeGraphNetworkState.Connected)
+            {
+                nodeGraph.NetworkIPAddress = "127.0.0.1";
+                nodeGraph.NetworkPort = 6666;
+               
+                nodeGraph.Connect();
+            }
+            else
+            {
+
+                DialogResult result = MessageBox.Show("Already Connected", "操作提示", MessageBoxButtons.YesNo);
+            }
          
         }
 
@@ -114,8 +123,8 @@ namespace ZDWindowsFormsTest
 
                 //	label1.Text = "CONNECTED";
                 //#####Color LightChange######如果连接灯的颜色改变
-                StatusLight.BackColor = Color.FromArgb(24,242,39);
-
+                //StatusLight1.BackColor = Color.FromArgb(0,0,0);
+                StatusLight.BackgroundImage = ZDWindowsFormsTest.Properties.Resources.greenlight;
                 foreach (var node in nodeGraph.Nodes)
 				{
 					if (!MaterialList.Items.Contains(node.MemberHolderName))

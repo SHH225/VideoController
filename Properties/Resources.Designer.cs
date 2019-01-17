@@ -63,6 +63,26 @@ namespace ZDWindowsFormsTest.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap greenlight {
+            get {
+                object obj = ResourceManager.GetObject("greenlight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap redlight {
+            get {
+                object obj = ResourceManager.GetObject("redlight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap titlebg {
             get {
                 object obj = ResourceManager.GetObject("titlebg", resourceCulture);
