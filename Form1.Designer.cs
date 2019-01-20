@@ -35,7 +35,7 @@
             this.AnimateList = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ConnectBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenDrama = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveDrama = new System.Windows.Forms.ToolStripMenuItem();
             this.CloseDrama = new System.Windows.Forms.ToolStripMenuItem();
             this.InEdit = new System.Windows.Forms.ToolStripMenuItem();
@@ -144,7 +144,7 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ConnectBtn,
-            this.模板ToolStripMenuItem,
+            this.OpenDrama,
             this.SaveDrama,
             this.CloseDrama,
             this.InEdit,
@@ -152,7 +152,7 @@
             this.设置ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(-1, 2);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(512, 39);
+            this.menuStrip1.Size = new System.Drawing.Size(632, 39);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -174,18 +174,19 @@
             this.ConnectBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.ConnectBtn.Click += new System.EventHandler(this.ConnectButton_Click);
             // 
-            // 模板ToolStripMenuItem
+            // OpenDrama
             // 
-            this.模板ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("模板ToolStripMenuItem.BackgroundImage")));
-            this.模板ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.模板ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.模板ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.模板ToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.模板ToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
-            this.模板ToolStripMenuItem.Name = "模板ToolStripMenuItem";
-            this.模板ToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.模板ToolStripMenuItem.Size = new System.Drawing.Size(80, 31);
-            this.模板ToolStripMenuItem.Text = "打开剧本";
+            this.OpenDrama.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OpenDrama.BackgroundImage")));
+            this.OpenDrama.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OpenDrama.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.OpenDrama.ForeColor = System.Drawing.Color.White;
+            this.OpenDrama.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.OpenDrama.Margin = new System.Windows.Forms.Padding(2);
+            this.OpenDrama.Name = "OpenDrama";
+            this.OpenDrama.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.OpenDrama.Size = new System.Drawing.Size(80, 31);
+            this.OpenDrama.Text = "打开剧本";
+            this.OpenDrama.Click += new System.EventHandler(this.OpenDrama_Click);
             // 
             // SaveDrama
             // 
@@ -828,7 +829,7 @@
         private System.Windows.Forms.ListBox MaterialList;
 		private System.Windows.Forms.Button ClearBt;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 模板ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OpenDrama;
         private System.Windows.Forms.ToolStripMenuItem InEdit;
         private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ConnectBtn;

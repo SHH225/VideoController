@@ -459,25 +459,14 @@ namespace ZDWindowsFormsTest
             {
                 localFilePath = sfd.FileName.ToString(); //获得文件路径 
                 string fileNameExt = localFilePath.Substring(localFilePath.LastIndexOf("\\") + 1); //获取文件名，不带路径
-
-                //获取文件路径，不带文件名 
-             //   FilePath = localFilePath.Substring(0, localFilePath.LastIndexOf("\\")); 
-
-                //给文件名前加上时间 
-              //  newFileName = DateTime.Now.ToString("yyyyMMdd") + fileNameExt; 
-
-                //在文件名里加字符 
-             //   saveFileDialog1.FileName.Insert(1,"dameng"); 
-
-                System.IO.FileStream fs = (System.IO.FileStream)sfd.OpenFile();//输出文件 
-                string str = "我好像不能全部覆\n" +
-                    "盖  源" +
-                    "文件中的数据";
-                byte[] buffer = Encoding.Default.GetBytes(str);
-                fs.Write(buffer, 0, buffer.Length);
-                fs.Flush();
-                fs.Close();
-                ////fs输出带文字或图片的文件，就看需求了 
+                FileStream fs = new FileStream(sfd.FileName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+                StreamWriter sw = new StreamWriter(fs);
+                for(int i = 0; i < FinalList.Items.Count; i++)
+                {
+                    sw.WriteLine(FinalList.Items[i]);
+                }
+                sw.Flush();
+                sw.Close();
             }
 
            
@@ -682,6 +671,21 @@ namespace ZDWindowsFormsTest
             NetworkIPAddress = IPAddressNum.Text;
         NetworkPort = Convert.ToInt32(PortNum.Text);
             DialogResult result = MessageBox.Show(IPAddressNum.Text+","+PortNum.Text, "操作提示", MessageBoxButtons.YesNo);
+        }
+
+        private void OpenDrama_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+            string path = ofd.FileName;
+            StreamReader sr = new StreamReader(path);
+            FinalList.Items.Clear();
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                FinalList.Items.Add(line);
+            }
+           
         }
 
         /*   private void ConnectBtn_MouseEnter(object sender, EventArgs e)
