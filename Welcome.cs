@@ -12,16 +12,18 @@ namespace ZDWindowsFormsTest
 {
     public partial class Welcome : Form
     {
+        public double a = 1;
         public Welcome()
         {
             InitializeComponent();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (this.Opacity >0)
+            if (a >0|| this.Opacity>0)
             {
-                this.Opacity -= 0.5;
-                //this.Opacity = 0.99;
+                a=a-0.07;
+                if(a<0.7)
+                this.Opacity -=0.07;
             }
             else
             {
